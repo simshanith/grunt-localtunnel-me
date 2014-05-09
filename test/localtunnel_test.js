@@ -22,7 +22,7 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports.localtunnel_me = {
+exports.localtunnel = {
   setUp: function (done) {
     // setup here if necessary
     done();

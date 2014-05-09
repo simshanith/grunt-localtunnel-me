@@ -30,6 +30,11 @@
     "load-grunt-tasks": "~0.3.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt jshint"
+  },
+  "dependencies": {
+    "localtunnel": "^1.2.0",
+    "lodash": "^2.4.1",
+    "open": "0.0.5"
   }
 }
