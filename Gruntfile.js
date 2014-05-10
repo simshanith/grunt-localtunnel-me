@@ -41,6 +41,13 @@ module.exports = function (grunt) {
           // Note: may not be available.
           subdomain: 'gruntlocaltunnelme'
         }
+      },
+      open: {
+        options: {
+          port: '<%= connect.open.options.port %>',
+          open: 'test/fixtures/hello.txt',
+          keepalive: true
+        }
       }
     },
     connect: {
@@ -48,6 +55,12 @@ module.exports = function (grunt) {
         options: {
           port: 8000,
           base: './test'
+        }
+      },
+      open: {
+        options: {
+          port: 1337,
+          open: 'http://localhost:<%= connect.open.options.port %>/test/fixtures/hello.txt'
         }
       }
     },
@@ -64,7 +77,10 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['connect', 'localtunnel', 'nodeunit']);
+  grunt.registerTask('test', ['connect:compare', 'localtunnel:compare', 'nodeunit']);
+
+  // Test functionality not in CI.
+  grunt.registerTask('test:open', ['connect:open', 'localtunnel:open']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
