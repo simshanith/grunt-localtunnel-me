@@ -27,7 +27,7 @@ module.exports = function(grunt) {
   // Yay idempotency.
   function ensureLeadingSlash(path) {
     if( _.isString(path) ) {
-      return trimLeadingSlash(path) + '/';
+      return '/'+trimLeadingSlash(path);
     }
   }
   grunt.registerMultiTask('localtunnel', 'Expsose local port to public URL via https://localtunnel.me', function() {
