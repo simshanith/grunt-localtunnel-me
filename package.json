@@ -1,42 +1,55 @@
 {
   "name": "grunt-localtunnel-me",
-  "version": "0.1.0",
   "description": "Expose local ports to a public URL with https://localtunnel.me",
+  "version": "0.1.1",
   "homepage": "https://github.com/simshanith/grunt-localtunnel-me",
-  "repository": "https://github.com/simshanith/grunt-localtunnel-me.git",
   "author": {
     "name": "Shane Daniel",
     "email": "simrpgman@gmail.com",
     "url": "http://simloovoo.com"
   },
-  "keywords": [
-    "gruntplugin",
-    "localtunnel"
-  ],
-  "main": "Gruntfile.js",
-  "engines": {
-    "node": ">= 0.8.0"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simshanith/grunt-localtunnel-me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simshanith/grunt-localtunnel-me/issues"
   },
   "licenses": [
     {
-      "type": "MIT"
+      "type": "MIT",
+      "url": "https://github.com/simshanith/grunt-localtunnel-me/blob/master/LICENSE-MIT"
     }
   ],
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-connect": "^0.7.1",
-    "grunt-contrib-jshint": "^0.8.0",
-    "grunt-contrib-nodeunit": "~0.3.0",
-    "jshint-stylish": "^0.1.5",
-    "load-grunt-tasks": "^0.3.0",
-    "q": "^1.0.1"
+  "engines": {
+    "node": ">= 0.8.0"
   },
   "scripts": {
     "test": "grunt"
   },
   "dependencies": {
-    "localtunnel": "^1.2.0",
-    "lodash": "^2.4.1",
-    "open": "0.0.5"
-  }
+    "localtunnel": "~1.2.0",
+    "lodash": "~2.4.1",
+    "open": "~0.0.5"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.3.3",
+    "jshint-stylish": "~0.2.0",
+    "load-grunt-tasks": "~0.4.0",
+    "q": "~1.0.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin",
+    "localtunnel"
+  ],
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ]
 }
