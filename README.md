@@ -1,4 +1,5 @@
-# grunt-localtunnel-me
+grunt-localtunnel-me [![Build Status](https://travis-ci.org/simshanith/grunt-localtunnel-me.svg?branch=master)](https://travis-ci.org/simshanith/grunt-localtunnel-me) [![Dependency Status](https://david-dm.org/simshanith/grunt-localtunnel-me.svg)](https://david-dm.org/simshanith/grunt-localtunnel-me) [![devDependency Status](https://david-dm.org/simshanith/grunt-localtunnel-me/dev-status.svg)](https://david-dm.org/simshanith/grunt-localtunnel-me#info=devDependencies)
+===============
 
 > Expose local ports to a public URL with https://localtunnel.me
 
@@ -17,10 +18,10 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-localtunnel-me');
 ```
 
-## The "localtunnel_me" task
+## The "localtunnel" task
 
 ### Overview
-In your project's Gruntfile, add a section named `localtunnel_me` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `localtunnel` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
@@ -30,14 +31,57 @@ grunt.initConfig({
     },
     your_target: {
       // Target-specific file lists and/or options go here.
-    },
-  },
+    }
+  }
 })
 ```
 
 ### Options
 
-TODO
+#### port
+Type: `Integer`  
+Default: `8000`
+
+The port to tunnel. Local server should already be listening to this port before attempting to tunnel.
+
+#### subdomain
+Type: `String`
+Default: `undefined`
+
+Request a subdomain to tunnel to on <https://localtunnel.me>.
+
+#### local_host
+Type: `String`
+Default: `localhost`
+
+The local hostname for the requests tunnel.
+
+
+#### open
+Type: `String | Boolean`
+Default: `false`
+
+If `true`, opens the browser to the public tunnel page. If a string, the option is treated as a path, eg:
+
+```js
+grunt.initConfig({
+  localtunnel: {
+    myTunnel: {
+     options: {
+      open: '/path/to/workspace/',
+      subdomain: 'uniqueworkspace'
+   }
+  }
+}
+});
+```
+...should expect to open `https://uniqueworkspace.localtunnel.me/path/to/workspace/` upon successful tunnel.
+
+#### keepalive
+Type: `Boolean`  
+Default: `false`
+
+Keep the server alive indefinitely. Note that if this option is enabled, any tasks specified after this task will _never run_. By default, once grunt's tasks have completed, the web server stops. This option changes that behavior.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
