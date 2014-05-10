@@ -3,6 +3,8 @@ grunt-localtunnel-me [![Build Status](https://travis-ci.org/simshanith/grunt-loc
 
 > Expose local ports to a public URL with https://localtunnel.me
 
+[![NPM](https://nodei.co/npm/grunt-localtunnel-me.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-localtunnel-me/)
+
 ## Getting Started
 This plugin requires Grunt.
 
