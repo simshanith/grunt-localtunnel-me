@@ -3,5 +3,6 @@
 .jshintrc
 .jshintignore
 .gitattributes
+.travis.yml
 test
 docs

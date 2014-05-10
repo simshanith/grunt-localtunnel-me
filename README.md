@@ -85,6 +85,19 @@ Default: `false`
 
 Keep the server alive indefinitely. Note that if this option is enabled, any tasks specified after this task will _never run_. By default, once grunt's tasks have completed, the web server stops. This option changes that behavior.
 
+
+#### handleTunnelError
+Type: `Function`
+Default: `function(err){}`
+
+Custom handler for tunnel error. Use `grunt --force` to continue execution after `grunt.warn` is called upon receiving the error. Receives the tunnel error as its only argument.
+
+#### handleTunnelSuccess
+Type: `Function`
+Default: `function(tunnel){}`
+
+Custom handler for tunnel success. Receives the tunnel instance as its only argument.
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 

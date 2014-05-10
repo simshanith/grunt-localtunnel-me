@@ -1,6 +1,6 @@
 {
   "name": "grunt-localtunnel-me",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Expose local ports to a public URL with https://localtunnel.me",
   "homepage": "https://github.com/simshanith/grunt-localtunnel-me",
   "repository": "https://github.com/simshanith/grunt-localtunnel-me.git",
@@ -10,7 +10,8 @@
     "url": "http://simloovoo.com"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "localtunnel"
   ],
   "main": "Gruntfile.js",
   "engines": {
