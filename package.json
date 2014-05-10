@@ -31,7 +31,7 @@
     "q": "^1.0.1"
   },
   "scripts": {
-    "test": "grunt jshint"
+    "test": "grunt"
   },
   "dependencies": {
     "localtunnel": "^1.2.0",
