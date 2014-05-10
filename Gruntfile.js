@@ -33,20 +33,21 @@ module.exports = function (grunt) {
 
     // Configuration to be run (and then tested).
     localtunnel: {
-      default_options: {
+      compare: {
         options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          // default port is 8000
+          port: 8000,
+          // default subdomain is auto-assigned.
+          // Note: may not be available.
+          subdomain: 'gruntlocaltunnelme'
         }
-      },
-      custom_options: {
+      }
+    },
+    connect: {
+      compare: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+          port: 8000,
+          base: './test'
         }
       }
     },
@@ -61,11 +62,11 @@ module.exports = function (grunt) {
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
-  // Whenever the "test" task is run, first clean the "tmp" dir, then run this
+  // Whenever the "test" task is run, run this
   // plugin's task(s), then test the result.
-  //grunt.registerTask('test', ['clean', 'localtunnel', 'nodeunit']);
+  grunt.registerTask('test', ['connect', 'localtunnel', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'localtunnel']);
+  grunt.registerTask('default', ['jshint', 'test']);
 
 };

@@ -22,6 +22,7 @@ module.exports = function(grunt) {
       subdomain: undefined,
       local_host: undefined,
       open: false,
+      keepalive: false,
       errorCallback: function(err) {
         // task error.
         var errorCode = 3;
@@ -42,9 +43,7 @@ module.exports = function(grunt) {
       });
 
       // end task on close.
-      tunnel.on('close', function() {
-        done();
-      });
+      tunnel.on('close', done);
 
       // close tunnel on exit.
       process.on('exit', function () {
@@ -59,6 +58,12 @@ module.exports = function(grunt) {
         } else if ( _.isString(options.open) ) {
           open(tunnel.url+options.open);
         }
+
+
+        if( !options.keepalive ) {
+          done();
+        }
+
       }
 
     });
