@@ -31,7 +31,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 var grunt = require('grunt');
 var http = require('http');
 var https = require('https');
-var Q = require('Q');
+var Q = require('q');
 var _ = require('lodash');
 
 function get(url, done) {
