@@ -47,6 +47,8 @@ module.exports = function(grunt) {
 
     var options = task.options(defaults);
 
+    var keepAlive = this.flags.keepalive || options.keepalive;
+
     // Handlers must be Functions; fallback to default no-op functions.
     // Iterate over array of keys.
     var handlers = ['handleTunnelSuccess', 'handleTunnelError'];
@@ -98,7 +100,7 @@ module.exports = function(grunt) {
         handleTunnelSuccess(tunnel);
         options.handleTunnelSuccess(tunnel);
 
-        if( !options.keepalive ) {
+        if( !keepAlive ) {
           done();
         }
       }
