@@ -22,6 +22,12 @@ grunt.loadNpmTasks('grunt-localtunnel-me');
 
 ## The "localtunnel" task
 
+_Run this task with the `grunt localtunnel` command._
+
+Note that this server only runs as long as grunt is running. Once grunt's tasks have completed, the web server stops. This behavior can be changed with the [keepalive](#keepalive) option, and can be enabled ad-hoc by running the task like `grunt localtunnel:keepalive`.
+
+This task was designed to be used in conjunction with another task that is run immediately afterwards, like the [grunt-contrib-qunit plugin](https://github.com/gruntjs/grunt-contrib-qunit) `qunit` task.
+
 ### Overview
 In your project's Gruntfile, add a section named `localtunnel` to the data object passed into `grunt.initConfig()`.
 
@@ -84,6 +90,8 @@ Type: `Boolean`
 Default: `false`
 
 Keep the server alive indefinitely. Note that if this option is enabled, any tasks specified after this task will _never run_. By default, once grunt's tasks have completed, the web server stops. This option changes that behavior.
+
+This option can also be enabled ad-hoc by running the task like `grunt connect:targetname:keepalive`
 
 
 #### handleTunnelError
