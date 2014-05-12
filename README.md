@@ -110,7 +110,15 @@ Custom handler for tunnel success. Receives the tunnel instance as its only argu
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+
+v0.1.2
+- Support `keepalive` option as flag, à la mode of `grunt-contrib-connect`.
+
+v0.1.1
+- `handleTunnelError` & `handleTunnelSuccess` options.
+
+v0.1.0
+- Initial Release.
 
 ## License
 Copyright (c) 2014 Shane Daniel. Licensed under the MIT license.
