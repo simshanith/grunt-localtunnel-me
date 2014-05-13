@@ -91,7 +91,7 @@ Default: `false`
 
 Keep the server alive indefinitely. Note that if this option is enabled, any tasks specified after this task will _never run_. By default, once grunt's tasks have completed, the web server stops. This option changes that behavior.
 
-This option can also be enabled ad-hoc by running the task like `grunt connect:targetname:keepalive`
+This option can also be enabled ad-hoc by running the task like `grunt localtunnel:targetname:keepalive`
 
 
 #### handleTunnelError

@@ -1,5 +1,7 @@
 /*
 
+Copyright (c) 2014 Shane Daniel, contributors
+
 Portions taken from https://github.com/gruntjs/grunt-contrib-connect
 
 Copyright (c) 2014 "Cowboy" Ben Alman, contributors
@@ -28,7 +30,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 'use strict';
 
-var grunt = require('grunt');
 var http = require('http');
 var https = require('https');
 var Q = require('q');
