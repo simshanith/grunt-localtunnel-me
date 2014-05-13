@@ -111,6 +111,9 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+v0.1.3
+- Fixed bug where `tasks` directory was not included in package. v0.1.2 may be unusable.
+
 v0.1.2
 - Support `keepalive` option as flag, à la mode of `grunt-contrib-connect`.
 
