@@ -1,5 +1,10 @@
 language: node_js
 node_js:
+  - "0.8"
   - "0.10"
 before_install:
+  # Use latest NPM & output version.
+  - npm update -g npm
+  - npm --version
+  # Install Grunt Command Line Interface.
   - npm install -g grunt-cli
