@@ -1,7 +1,7 @@
 {
   "name": "grunt-localtunnel-me",
   "description": "Expose local ports to a public URL with https://localtunnel.me",
-  "version": "0.1.6-pre",
+  "version": "0.1.6-SNAPSHOT",
   "homepage": "https://github.com/simshanith/grunt-localtunnel-me",
   "author": {
     "name": "Shane Daniel",
@@ -25,7 +25,7 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "grunt --verbose"
+    "test": "grunt -v"
   },
   "main": "tasks/localtunnel.js",
   "dependencies": {
@@ -40,7 +40,8 @@
     "grunt-contrib-nodeunit": "^0.4.0",
     "jshint-stylish": "~0.2.0",
     "load-grunt-tasks": "~0.4.0",
-    "q": "~1.0.1"
+    "q": "~1.0.1",
+    "time-grunt": "~0.3.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.2"
