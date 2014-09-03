@@ -111,12 +111,13 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-v2014-05-14 v0.1.5 Added `tasks/localtunnel.js` as `main`. Should hopefully solve recurring NPM issue.
-2014-05-14 v0.1.4 Problem publishing. Update `localtunnel` dependency.
-2014-05-13 v0.1.3 Fixed bug where `tasks` directory was not included in package. v0.1.2 may be unusable.
-2014-05-13 v0.1.2  Problem publishing. Support `keepalive` option as flag, à la mode of `grunt-contrib-connect`.
-2014-05-10 v0.1.1 Added `handleTunnelError` & `handleTunnelSuccess` options.
-2014-05-10 v0.1.0 Initial Release.
+* 2014-09-03 v0.1.6 Updated dependencies; improved testing.
+* 2014-05-14 v0.1.5 Added `tasks/localtunnel.js` as `main`. Should hopefully solve recurring NPM issue.
+* 2014-05-14 v0.1.4 Problem publishing. Update `localtunnel` dependency.
+* 2014-05-13 v0.1.3 Fixed bug where `tasks` directory was not included in package. v0.1.2 may be unusable.
+* 2014-05-13 v0.1.2  Problem publishing. Support `keepalive` option as flag, à la mode of `grunt-contrib-connect`.
+* 2014-05-10 v0.1.1 Added `handleTunnelError` & `handleTunnelSuccess` options.
+* 2014-05-10 v0.1.0 Initial Release.
 
 ## License
 Copyright (c) 2014 Shane Daniel. Licensed under the MIT license.
